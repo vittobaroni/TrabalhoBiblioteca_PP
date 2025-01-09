@@ -1,0 +1,4 @@
+interface Itens {
+    String toString();
+    
+}
