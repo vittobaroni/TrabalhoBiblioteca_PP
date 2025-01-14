@@ -1,5 +1,11 @@
 import java.time.LocalDate;
 import java.util.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class Principal {
 
@@ -14,10 +20,19 @@ public class Principal {
         List <Emprestimos> emprestados = new ArrayList();
         emprestados.add(a1);
         emprestados.add(a2);
-        for (Emprestimos i : emprestados){
-            System.out.println(i);
 
+        //GRAVAR CONTEUDO NO ARQUIVO
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("./Text.txt"))){
+            for (Emprestimos i : emprestados){
+                writer.write(i.emprestado.toString());
+                writer.newLine();
+                writer.write(i.toString());
+                writer.newLine();
+                System.out.println("Conteudo Gravado!!");
+                System.out.println(i.emprestado);
+            }    
+        }catch (IOException e) {
+            e.printStackTrace();
         }
-
     }
 }

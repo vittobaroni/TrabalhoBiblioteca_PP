@@ -12,12 +12,8 @@ public class Utensilios implements Itens{
     }
 
     public String toString(){
-        
-        String nomeString = "Utensilio: " + this.nome;
-        String descricaoString = "Descricao: " + this.descricao;
-        String materialString = "Material: " + this.material;
 
-        return nomeString + "," + descricaoString + "," + materialString;
+        return "2" + "," + nome + "," + descricao + "," + material;
 
     }
 }

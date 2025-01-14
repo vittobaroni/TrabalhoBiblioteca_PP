@@ -1,0 +1,4 @@
+1,O Monge e o Executivo,James Hunter,Sextante,2004
+2025-01-14,2025-01-29,2025-02-03,joaozinho@gmil.com
+2,Panela de Ferro,panela para cozinhar,Ferro
+2025-01-14,2025-01-29,2025-02-03,joaozinho@gmil.com
