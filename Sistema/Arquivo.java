@@ -44,17 +44,9 @@ public class Arquivo {
         List <Emprestimos> emprestados = new ArrayList<>();
         for(int i=0; i< leituras.size();i++){
             String linha1 = leituras.get(i);
-            System.out.println(linha1);
             String linha2 = leituras.get(i+1);
-            System.out.println(linha2);
             String[] partes1 = linha1.split(",");
-            for(int k = 0; k< partes1.length;k++){
-                System.out.println(partes1[k] + "\n");
-            }
             String[] partes2 = linha2.split(",");
-            for(int k = 0; k< partes1.length;k++){
-                System.out.println(partes1[k] + "\n");
-            }
             Itens a;
             if(partes1.length == 4){
                 int ano = Integer.parseInt(partes1[3].trim());
