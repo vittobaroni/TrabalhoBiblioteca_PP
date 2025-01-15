@@ -11,7 +11,7 @@ public class Principal {
 
     public static void main(String[] args){
 
-        Livro l1 = new Livro("O Monge e o Executivo","James Hunter","Sextante",2004);
+        /*Livro l1 = new Livro("O Monge e o Executivo","James Hunter","Sextante",2004);
 
         Utensilios u1 = new Utensilios("Panela de Ferro", "panela para cozinhar", "Ferro");
 
@@ -20,19 +20,15 @@ public class Principal {
         List <Emprestimos> emprestados = new ArrayList();
         emprestados.add(a1);
         emprestados.add(a2);
+        */
 
-        //GRAVAR CONTEUDO NO ARQUIVO
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("./Text.txt"))){
-            for (Emprestimos i : emprestados){
-                writer.write(i.emprestado.toString());
-                writer.newLine();
-                writer.write(i.toString());
-                writer.newLine();
-                System.out.println("Conteudo Gravado!!");
-                System.out.println(i.emprestado);
-            }    
-        }catch (IOException e) {
-            e.printStackTrace();
-        }
+        List <String> leituras = Arquivo.ler("Text.txt");
+        List <Emprestimos> emprestados = Arquivo.processarDados(leituras);
+        Livro a = new Livro("Joao e as Travessuras de Joana", "Pacheco", "Pacheco.co", 2025);
+        Emprestimos b = new Emprestimos(LocalDate.now(),LocalDate.now().plusDays(50),LocalDate.now().plusDays(100),"romilsonbj@gmail.com", a);
+        emprestados.add(b);
+        Arquivo.salvar(emprestados, "Texto.txt");
+
+        
     }
 }

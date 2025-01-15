@@ -13,7 +13,7 @@ public class Utensilios implements Itens{
 
     public String toString(){
 
-        return "2" + "," + nome + "," + descricao + "," + material;
+        return nome + "," + descricao + "," + material;
 
     }
 }

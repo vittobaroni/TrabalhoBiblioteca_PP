@@ -16,7 +16,7 @@ public class Livro implements Itens{
 
     public String toString(){
 
-        return "1" + "," + nome + "," + autor + "," + editora + "," + ano;
+        return nome + "," + autor + "," + editora + "," + ano;
 
     }
 
