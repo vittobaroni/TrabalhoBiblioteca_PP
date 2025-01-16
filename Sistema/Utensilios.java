@@ -24,4 +24,8 @@ public class Utensilios implements Itens{
         String mat = "Material: " + material;
         return name + " , " + desc + " , " + mat;
     }
+
+    public String retornaNome(){
+        return this.nome;
+    }
 }

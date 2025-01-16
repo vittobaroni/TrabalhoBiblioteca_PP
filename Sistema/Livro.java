@@ -28,4 +28,8 @@ public class Livro implements Itens{
         return name + " , " + aut + " , " + edt + " , "  + ano;
     }
 
+    public String retornaNome(){
+        return this.nome;
+    }
+
 }
