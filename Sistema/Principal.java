@@ -32,6 +32,7 @@ public class Principal {
         List <Emprestimos> emprestados = Arquivo.processarDados(leituras);
         List <Pessoas> pessoas = Arquivo.processarPessoas(leituras2);
         int m=1;
+        limparTela();
         System.out.println("Bem-vindo ao programa de Emprestimos!!");
         Scanner scanner = new Scanner(System.in);
         
