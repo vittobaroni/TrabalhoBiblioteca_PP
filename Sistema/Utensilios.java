@@ -1,7 +1,7 @@
 public class Utensilios implements Itens{
-    String nome;
-    String descricao;
-    String material;
+    private String nome;
+    private String descricao;
+    private String material;
 
     public Utensilios (String nome, String descricao, String material){
 

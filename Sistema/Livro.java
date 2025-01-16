@@ -1,8 +1,8 @@
 public class Livro implements Itens{
-    String nome;
-    String autor;
-    String editora;
-    int ano;
+    private String nome;
+    private String autor;
+    private String editora;
+    private int ano;
 
 
     public Livro(String titulo, String autor, String editora, int ano){
