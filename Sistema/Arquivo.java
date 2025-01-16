@@ -52,7 +52,13 @@ public class Arquivo {
             }else{
                 a = new Utensilios(partes1[0].trim(), partes1[1].trim(), partes1[2].trim());
             }
-            Emprestimos b = new Emprestimos(LocalDate.parse(partes2[0].trim()), LocalDate.parse(partes2[1].trim()), LocalDate.parse(partes2[2].trim()), partes2[3].trim(), a);
+            LocalDate devEf;
+            if(partes2[2].trim().equals("null")==false){
+                devEf = LocalDate.parse(partes2[2].trim());
+            }else{
+                devEf = null;
+            }
+            Emprestimos b = new Emprestimos(LocalDate.parse(partes2[0].trim()), LocalDate.parse(partes2[1].trim()), devEf, partes2[3].trim(), a);
             emprestados.add(b);
             i++;
         }

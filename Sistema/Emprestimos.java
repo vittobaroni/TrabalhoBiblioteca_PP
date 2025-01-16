@@ -32,6 +32,10 @@ public class Emprestimos {
     }
 
     public boolean verificarAtraso(){
+        if(this.devolucaoEfetiva == null){
+            return false;
+            
+        }
         Period period = Period.between(this.devolucaoEfetiva, this.devolucao);
         if(period.isNegative()==true){
             return true;

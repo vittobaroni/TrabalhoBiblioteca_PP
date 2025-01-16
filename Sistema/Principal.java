@@ -40,7 +40,7 @@ public class Principal {
         
         while(m>=0){
             limparTela();
-            System.out.println("Diga oque deseja fazer: \n 1-Fazer um novo emprestimo\n 2- Excluir um emprestimos\n 3- Ver todos os emprestimos\n4- Devolver item\n 5-Pessoas bloqueadas\n 6-Sair\n\nDigite aqui: ");
+            System.out.println("Diga oque deseja fazer: \n 1-Fazer um novo emprestimo\n 2- Excluir um emprestimos\n 3- Ver todos os emprestimos\n 4- Devolver item\n 5-Pessoas bloqueadas\n 6-Sair\n\nDigite aqui: ");
             m = scanner.nextInt();
             if(m == 1){
                 limparTela();
@@ -71,6 +71,7 @@ public class Principal {
                 System.out.println("\nPressione Enter para continuar...");
                 scanner.nextLine();
             }else if(m == 3){
+                limparTela();
                 scanner.nextLine();
                 for(Emprestimos i: emprestados){
                     System.out.println(i);
@@ -87,9 +88,9 @@ public class Principal {
                     }
                     System.out.println("\n\n\nPressione Enter para continuar...");
                     scanner.nextLine();
-                    scanner.nextLine();
                 }
             }else if(m == 4){
+                limparTela();
                 System.out.println("Deseja fazer manual ou automatico?");
                 scanner.nextLine();
                 String op = scanner.nextLine();
@@ -112,6 +113,7 @@ public class Principal {
                     }
                 }
             }else if(m == 5){
+                limparTela();
                 scanner.nextLine();
                 for(Pessoas i : pessoas){
                     if(i.removeBan()== true){
