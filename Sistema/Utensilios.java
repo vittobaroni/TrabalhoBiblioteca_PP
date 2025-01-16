@@ -11,9 +11,17 @@ public class Utensilios implements Itens{
 
     }
 
-    public String toString(){
+    public String arquivoString(){
 
         return nome + "," + descricao + "," + material;
 
+    }
+
+
+    public String toString(){
+        String name = "Objeto: " + nome;
+        String desc = "Descrição: " + descricao;
+        String mat = "Material: " + material;
+        return name + " , " + desc + " , " + mat;
     }
 }

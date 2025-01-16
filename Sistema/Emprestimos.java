@@ -15,9 +15,18 @@ public class Emprestimos {
         this.emprestado = emprestado;
     }
 
-    public String toString(){
+    public String arquivoString(){
 
         return retirada + "," + devolucao + "," + devolucaoEfetiva + "," + email;
+
+    }
+
+    public String toString(){
+        String retir = "A retirada foi feita: " + retirada;
+        String dev = "com a data de devolução para: " + devolucao;
+        String devEfetiva = "Foi devolvido em: " + devolucaoEfetiva;
+        String email = "Por: " + this.email;
+        return emprestado + "\n" + retir + " , " + dev + " . " + devEfetiva + " . " + email + "\n";
 
     }
     

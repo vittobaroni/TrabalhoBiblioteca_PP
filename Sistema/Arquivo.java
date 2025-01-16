@@ -13,9 +13,9 @@ public class Arquivo {
     public static void salvar(List <Emprestimos> emprestados, String nomeDoArquivo){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeDoArquivo))){
             for (Emprestimos i : emprestados){
-                writer.write(i.emprestado.toString());
+                writer.write(i.emprestado.arquivoString());
                 writer.newLine();
-                writer.write(i.toString());
+                writer.write(i.arquivoString());
                 writer.newLine();
                 System.out.println("Conteudo Gravado!!");
                 System.out.println(i.emprestado);
